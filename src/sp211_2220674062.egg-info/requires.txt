@@ -1,0 +1,10 @@
+
+[dev]
+pytest
+twine
+wheel
+build
+sphinx
+
+[test]
+pytest
