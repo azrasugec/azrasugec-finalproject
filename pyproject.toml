@@ -1,0 +1,29 @@
+[project]
+name = "sp211_2220674062" 
+version = "0.0.1"
+authors = [
+  { name="Azra Su Geç", email="azrasugec@gmail.com" }, 
+]
+description = "A Python package for shortest path calculations."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/GMT-211-Data-Structures-and-Algorithms/python-packaging-azrasugec"
+"Bug Tracker" = "https://github.com/GMT-211-Data-Structures-and-Algorithms/python-packaging-azrasugec/issues"
+
+[project.optional-dependencies]
+dev = ["pytest", "twine", "wheel", "build", "sphinx"] 
+test = ["pytest"] 
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"] 
