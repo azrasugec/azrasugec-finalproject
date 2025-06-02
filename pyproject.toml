@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sp211_2220674062"
+version = "0.1.0"
+description = "A shortest path project using OpenStreetMap and folium."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "networkx",
+  "folium",
+  "osmnx",
+  "geopy",
+  "pytest"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
