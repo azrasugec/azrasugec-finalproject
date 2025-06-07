@@ -280,6 +280,8 @@ Below is a summary of the external Python libraries used in this project and the
 | **difflib**   | To correct user input with fuzzy matching (AI-like suggestion system)   |
 | **pytest**    | To write and run unit tests that verify core functionalities            |
 | **Sphinx**    | To generate structured documentation and host it with Wagtail Theme     |
+| **scikit-learn** | To support nearest node search via BallTree in OSM-based unprojected graphs |
+| **twine**        | To securely upload the Python package to TestPyPI                           |
 
 -----------
 
