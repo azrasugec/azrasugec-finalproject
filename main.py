@@ -1,39 +1,59 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
+
 from sp211_2220674062.shortest_path import (
     calculate_shortest_path_and_map_from_names,
+    calculate_multi_stop_route,
+    get_route_summary,
     read_coordinates_from_csv,
     auto_correct_input
 )
+
 
 def main():
     csv_path = "coordinates.csv"
     locations = read_coordinates_from_csv(csv_path)
     valid_names = list(locations.keys())
 
-    print("📍 Available Locations:")
+    print("📍 Mevcut Lokasyonlar:")
     for loc in valid_names:
         print(f" - {loc}")
 
-    origin_input = input("\nEnter starting location: ").strip()
-    destination_input = input("Enter destination location: ").strip()
+    user_input = input("\nLütfen güzergâhı girin (virgülle ayırarak, örn: A, B, C): ").strip()
+    raw_points = [x.strip() for x in user_input.split(",")]
 
-    origin, origin_msg = auto_correct_input(origin_input, valid_names)
-    destination, dest_msg = auto_correct_input(destination_input, valid_names)
+    corrected_points = []
+    for name in raw_points:
+        corrected, msg = auto_correct_input(name, valid_names)
+        if corrected is None:
+            print(f"❌ '{name}' tanınmadı ve düzeltilemedi.")
+            return
+        if msg:
+            print(f"🔁 Düzeltilmiş: {msg}")
+        corrected_points.append(corrected)
 
-    if origin_msg:
-        print(f"🔁 Start corrected: {origin_msg}")
-    if dest_msg:
-        print(f"🔁 Destination corrected: {dest_msg}")
-
-    if origin is None or destination is None:
-        print("❌ Error: Could not interpret input.")
+    if len(corrected_points) < 2:
+        print("❌ En az iki geçerli nokta girilmelidir.")
         return
 
     try:
-        distance = calculate_shortest_path_and_map_from_names(origin, destination, csv_path)
-        print(f"\n✅ Shortest distance: {distance} km")
-        print("🗺️ Map saved as 'map.html'")
+        if len(corrected_points) == 2:
+            distance = calculate_shortest_path_and_map_from_names(
+                corrected_points[0], corrected_points[1], csv_path
+            )
+            summary = get_route_summary(corrected_points[0], corrected_points[1], csv_path)
+            print(f"\n✅ En kısa mesafe: {summary['distance_km']} km")
+            print(f"👣 Adım sayısı: {summary['steps']}")
+            print(f"⏱️ Tahmini süre: {summary['estimated_time_min']} dakika")
+            print("🗺️ Harita 'map.html' olarak kaydedildi.")
+        else:
+            distance = calculate_multi_stop_route(corrected_points, csv_path)
+            print(f"\n✅ Çok noktalı rota mesafesi: {distance} km")
+            print("🗺️ Harita 'multi_map.html' olarak kaydedildi.")
+
     except ValueError as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\n❌ Hata: {e}")
 
 if __name__ == "__main__":
     main()
