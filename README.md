@@ -82,12 +82,12 @@ It contains all the key components required to read location data, apply intelli
   Uses OSMnx to generate the walking network graph for the Beytepe Campus, and NetworkX to calculate the shortest route using Dijkstra’s algorithm.  
   It then visualizes the result with Folium and saves it as an interactive HTML map.
 
-> Logs are saved automatically under the `logs/log.txt` file if the folder doesn't exist.
+- Logs are saved automatically under the `logs/log.txt` file if the folder doesn't exist.
 
->❗**Recently Added Features** `get_route_summary()`  
+# ❗**Recently Added Features** `get_route_summary()`  
   Calculates distance, number of steps, and estimated walking time.
 
->❗**Recently Added Features** `calculate_multi_stop_route([...])`  
+# ❗**Recently Added Features** `calculate_multi_stop_route([...])`  
   Computes routes that pass through multiple waypoints in order.
 
 
@@ -149,14 +149,6 @@ The result is printed in the terminal and the route is saved as an interactive `
 
 ![Step 5 – main.py CLI Interface](img/ss4.png)
 
->❗**Recently Added Features** 
-
-- The `main.py` script was updated to support multiple destination inputs (e.g., A → B → C),  
-- and now calculates the total route distance for multi-stop paths.  
-- The result is displayed in the terminal and saved as `multi_map.html`.
-
-![Multi-stop CLI interaction](img/ss13.png)
-
 ---------
 
 ## 📏 Step 6 – User Input and Route Generation
@@ -177,6 +169,15 @@ The distance is displayed in the terminal, and the route is visualized and saved
 ```
 
 ![Step 6 – input](img/ss5.png)
+
+# ❗**Recently Added Features** 
+
+- The `main.py` script was updated to support multiple destination inputs (e.g., A → B → C),  
+- and now calculates the total route distance for multi-stop paths.  
+- The result is displayed in the terminal and saved as `multi_map.html`.
+
+![Multi-stop CLI interaction](img/ss13.png)
+
 
 -----------
 ## 🗺️ Step 7 – HTML Map Output with Route Visualization
@@ -218,8 +219,8 @@ pytest tests/test_shortest_path.py
 
 ![Step 8 – test](img/ss9.png)
 
->❗**Recently Added Features** These features were verified using `pytest`, and continuous integration was set up via **GitHub Actions**.  
-> The test suite is automatically triggered on each commit to ensure functionality.
+# ❗**Recently Added Features** These features were verified using `pytest`, and continuous integration was set up via **GitHub Actions**.  
+- The test suite is automatically triggered on each commit to ensure functionality.
 
 ![CI passing](img/ss12.png)
 ---------
