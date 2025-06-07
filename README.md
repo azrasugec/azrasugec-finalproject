@@ -310,7 +310,7 @@ A continuous integration pipeline was configured using GitHub Actions.
 -  Runs `pytest` on each push
 -  Ensures code reliability with every update
 
-![CI passing](img/ss15.png)
+![Step 11 –CI ](img/ss15.png)
 
 
 ## ✅ Conclusion
