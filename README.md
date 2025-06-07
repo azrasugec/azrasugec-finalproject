@@ -118,7 +118,7 @@ Rektörlük,39.86660,32.73540
 
 ## 📦 Step 4 – Uploading the Package to TestPyPI
 
-After the development and packaging steps were completed, the Python package was uploaded to [TestPyPI](https://test.pypi.org/project/sp211-2220674062/).
+After the development and packaging steps were completed, the Python package was uploaded to [TestPyPI](https://test.pypi.org/simple/ sp211-2220674062/).
 
 This allows users to install the package directly via pip and test its functionality without publishing to the main PyPI index.
 
