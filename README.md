@@ -7,16 +7,52 @@ based on OpenStreetMap (OSM) data.
 The project is designed around Hacettepe University’s Beytepe Campus as a sample area,
 but it is flexible enough to be used with any CSV file that includes location names and coordinates.
 
+
+## ⚠️ IMPORTANT NOTICE ⚠️
+
+I would like to inform you that I encountered some difficulties while completing this assignment,  
+and I am aware that there may be certain mistakes in my submission.
+
+Although I repeatedly deleted my local project files, some components were not fully removed from GitHub Classroom.  
+This led to file conflicts and caused the project structure to become overly complex and layered.
+
+I have made my best effort to resolve these issues, and I continued development using a clean backup.  
+Still, I am not entirely confident that everything is perfectly correct.
+
+Thank you for your understanding.
+
+> The screenshot below shows the error I encountered during the conflict:
+![classroom error](img/ss11.png)
 ### 💡 Key Features
 
 - 📍 Reads custom location data from a `coordinates.csv` file
-- 🧠 Provides intelligent input correction (e.g., `küütüphane` → `Kütüphane`)
+- ✨ Provides intelligent input correction (e.g., `küütüphane` → `Kütüphane`)
 - 🗺️ Generates an interactive route map as a `.html` file
 - 🔗 Creates a clickable OpenStreetMap route link
 - 📝 Automatically logs activity to `logs/log.txt`
 - 🧪 Includes unit testing with `pytest`
 - 📦 Fully packaged and published to [TestPyPI](https://test.pypi.org/project/sp211-2220674062/)
+- ❗New Features Added 
+
 -------
+> ⚠️ **Update Notice – 8 June 2025**
+>
+> This repository was updated to fulfill the second phase of the final assignment.
+> Below is a summary of the key updates and improvements made in this version:
+
+| Feature / Update                    | Description                                                                 |
+|------------------------------------|-----------------------------------------------------------------------------|
+| ✅ `get_route_summary()`           | Calculates distance, number of steps, and estimated walking time            |
+| ✅ `calculate_multi_stop_route()`  | Supports routes with multiple stops (A → B → C)                             |
+| ✅ Unit tests added                | Tests verify core functions like route and map generation (`pytest`)        |
+| ✅ CI/CD pipeline added            | GitHub Actions runs tests on every push                                     |
+| ✅ `requirements.txt` created      | Ensures correct installation of all dependencies including `scikit-learn`   |
+| ✅ Error-resilient input handling  | Uses `difflib` for AI-like fuzzy input correction                           |
+
+> 😊 Below, you will find a step-by-step breakdown of the project structure and how each feature was developed and integrated.
+
+
+------
 
 ## 🪄 Step 1 – Creating and Switching to a New Branch
 
@@ -29,7 +65,7 @@ git checkout -b azra-shortest-path
 
  
 -------
-## 🧠 Step 2 – Writing the Core Algorithm in `shortest_path.py`
+## Step 2 – Writing the Core Algorithm in `shortest_path.py`
 
 The core logic of the project is implemented inside `src/sp211_2220674062/shortest_path.py`.  
 It contains all the key components required to read location data, apply intelligent input correction, build the walking network using OSM, and calculate the shortest path.
@@ -47,6 +83,13 @@ It contains all the key components required to read location data, apply intelli
   It then visualizes the result with Folium and saves it as an interactive HTML map.
 
 > Logs are saved automatically under the `logs/log.txt` file if the folder doesn't exist.
+
+>❗**Recently Added Features** `get_route_summary()`  
+  Calculates distance, number of steps, and estimated walking time.
+
+>❗**Recently Added Features** `calculate_multi_stop_route([...])`  
+  Computes routes that pass through multiple waypoints in order.
+
 
 ![Step 2 – shortest_path.py Functions](img/ss2.png)
 
@@ -87,7 +130,7 @@ pip install -i https://test.pypi.org/simple/ sp211-2220674062
 ![Step 4 – testpypi](img/ss7.png)
 
 ---------
-## 🖥️ Step 5 – Interactive CLI with `main.py`
+## 👩‍💻 Step 5 – Interactive CLI with `main.py`
 
 To make the project usable from the command line, a simple interface was created using a `main.py` script.
 
@@ -105,6 +148,14 @@ The result is printed in the terminal and the route is saved as an interactive `
 - Displays distance and saves map
 
 ![Step 5 – main.py CLI Interface](img/ss4.png)
+
+>❗**Recently Added Features** 
+
+- The `main.py` script was updated to support multiple destination inputs (e.g., A → B → C),  
+- and now calculates the total route distance for multi-stop paths.  
+- The result is displayed in the terminal and saved as `multi_map.html`.
+
+![Multi-stop CLI interaction](img/ss13.png)
 
 ---------
 
@@ -141,6 +192,14 @@ The file is automatically saved as `map.html` and can be opened in any web brows
 
 ![Step 7 – HTML Map with Route](img/ss6.png)
 
+>❗**Recently Added Features** 
+
+> The generated map now supports multi-stop routes.  
+> In the example below, the walking path goes through three locations in order, and the total distance is shown on the map as well.  
+> Each stop is marked with a blue pin, while the total distance is displayed at the midpoint with a green info marker.
+
+![Multi-stop route map](img/ss14.png)
+
 -----------
 ## ✅ Step 8 – Unit Testing with Pytest
 
@@ -159,6 +218,10 @@ pytest tests/test_shortest_path.py
 
 ![Step 8 – test](img/ss9.png)
 
+>❗**Recently Added Features** These features were verified using `pytest`, and continuous integration was set up via **GitHub Actions**.  
+> The test suite is automatically triggered on each commit to ensure functionality.
+
+![CI passing](img/ss12.png)
 ---------
 
 ## 🗂️ Step 9 – Logging System (`logs/log.txt`)
@@ -221,7 +284,7 @@ Below is a summary of the external Python libraries used in this project and the
 -----------
 
 
-## 🧠 How AI is Used
+## 🤖 How AI is Used
 
 While this project does not use deep learning or machine learning models, it leverages **AI-like behavior** in two key ways:
 
@@ -239,6 +302,16 @@ User input: "küütüphane"
 → Corrected to: "Kütüphane"
 ```
 ----------
+## 🔁 Step 11 – CI/CD with GitHub Actions
+
+A continuous integration pipeline was configured using GitHub Actions.
+
+-  Automatically installs dependencies from `requirements.txt`
+-  Runs `pytest` on each push
+-  Ensures code reliability with every update
+
+![CI passing](img/ss15.png)
+
 
 ## ✅ Conclusion
 
@@ -246,17 +319,19 @@ This project demonstrates how to build a fully functional and user-friendly Pyth
 
 It incorporates:
 
-- 📍 Coordinate-based location selection
-- 🧠 Intelligent input correction (AI-like behavior)
-- 🧪 Unit testing and logging
-- 🗺️ Interactive HTML map visualization
-- 📚 Full documentation using Sphinx and Wagtail Theme
-- 📦 Published package on TestPyPI
+- 📍 Coordinate-based location selection  
+- 🤖 Intelligent input correction (AI-like behavior)  
+- 🧪 Unit testing and logging  
+- 🗺️ Interactive HTML map visualization  
+- 📚 Full documentation using Sphinx and Wagtail Theme  
+- 📦 Published package on TestPyPI  
+- 🔄 Extended support for multi-stop route planning and route summaries
 
 Throughout the development process, attention was given to both functionality and usability.  
 The result is a clean, documented, tested, and reusable Python package that can be customized with any location-based dataset.
 
-> This project has helped strengthen skills in Python programming, modular design, package publishing, and AI-assisted development.
+> This project has helped strengthen skills in Python programming, modular design, package publishing,  
+> automated testing, and AI-assisted development.
 
 Thank you for reviewing this work!
 
