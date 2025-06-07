@@ -3,3 +3,4 @@ networkx
 folium
 geopy
 pytest
+scikit-learn
