@@ -1,13 +1,9 @@
-import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
-
 from sp211_2220674062.shortest_path import (
     calculate_shortest_path_and_map_from_names,
     get_route_summary,
     calculate_multi_stop_route
 )
-
 
 def test_shortest_path_and_map_generation():
     origin = "Geomatik Mühendisliği"
