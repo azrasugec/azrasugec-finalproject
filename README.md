@@ -7,6 +7,10 @@ based on OpenStreetMap (OSM) data.
 The project is designed around Hacettepe University’s Beytepe Campus as a sample area,
 but it is flexible enough to be used with any CSV file that includes location names and coordinates.
 
+## 📄 Project Documentation  
+[Click here to view the full documentation](https://azrasugec.github.io/azrasugec-finalproject/)
+
+
 
 ## ⚠️ IMPORTANT NOTICE ⚠️
 
