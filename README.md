@@ -134,8 +134,7 @@ Rektörlük,39.86660,32.73540
 
 ## 📦 Step 4 – Uploading the Package to TestPyPI
 
-After the development and packaging steps were completed, the Python package was uploaded to 
-- [TestPyPI](https://test.pypi.org/simple/ sp211-2220674062/).
+After the development and packaging steps were completed, the Python package was uploaded to [TestPyPI](https://test.pypi.org/simple/sp211-2220674062/).
 
 This allows users to install the package directly via pip and test its functionality without publishing to the main PyPI index.
 
@@ -210,7 +209,7 @@ The file is automatically saved as `map.html` and can be opened in any web brows
 
 ![Step 7 – HTML Map with Route](img/ss6.png)
 
-**❗*Recently Added Features**
+**❗Recently Added Features**
 
 > The generated map now supports multi-stop routes.  
 > In the example below, the walking path goes through three locations in order, and the total distance is shown on the map as well.  
@@ -237,7 +236,7 @@ pytest tests/test_shortest_path.py
 ![Step 8 – test](img/ss9.png)
 
 **❗Recently Added Features- These features were verified using `pytest`, and continuous integration was set up via *GitHub Actions.* 
- 
+
 - The test suite is automatically triggered on each commit to ensure functionality.
 
 ![CI passing](img/ss12.png)
