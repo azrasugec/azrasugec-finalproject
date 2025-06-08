@@ -84,10 +84,19 @@ It contains all the key components required to read location data, apply intelli
 
 - Logs are saved automatically under the `logs/log.txt` file if the folder doesn't exist.
 
-# ❗**Recently Added Features** `get_route_summary()`  
+`calculate_multi_stop_route(stop_names, csv_path, filename="multi_map.html")`  
+  Calculates the shortest path passing through multiple waypoints in order. Saves the multi-stop route as `multi_map.html`.
+
+- `get_route_summary(origin, destination, csv_path)`  
+  Returns a dictionary with:
+  - total distance in kilometers  
+  - number of steps (nodes in path)  
+  - estimated time in minutes (assuming walking speed)
+
+# ❗# Recently Added Features- `get_route_summary()`  
   Calculates distance, number of steps, and estimated walking time.
 
-# ❗**Recently Added Features** `calculate_multi_stop_route([...])`  
+# ❗# Recently Added Features- `calculate_multi_stop_route([...])`  
   Computes routes that pass through multiple waypoints in order.
 
 
@@ -170,7 +179,7 @@ The distance is displayed in the terminal, and the route is visualized and saved
 
 ![Step 6 – input](img/ss5.png)
 
-# ❗**Recently Added Features** 
+# ❗# Recently Added Features 
 
 - The `main.py` script was updated to support multiple destination inputs (e.g., A → B → C),  
 - and now calculates the total route distance for multi-stop paths.  
@@ -193,7 +202,7 @@ The file is automatically saved as `map.html` and can be opened in any web brows
 
 ![Step 7 – HTML Map with Route](img/ss6.png)
 
->❗**Recently Added Features** 
+>❗*Recently Added Features*
 
 > The generated map now supports multi-stop routes.  
 > In the example below, the walking path goes through three locations in order, and the total distance is shown on the map as well.  
@@ -219,7 +228,7 @@ pytest tests/test_shortest_path.py
 
 ![Step 8 – test](img/ss9.png)
 
-# ❗**Recently Added Features** These features were verified using `pytest`, and continuous integration was set up via **GitHub Actions**.  
+# ❗Recently Added Features- These features were verified using `pytest`, and continuous integration was set up via *GitHub Actions.*  
 - The test suite is automatically triggered on each commit to ensure functionality.
 
 ![CI passing](img/ss12.png)
