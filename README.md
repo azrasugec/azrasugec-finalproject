@@ -138,7 +138,7 @@ After the development and packaging steps were completed, the Python package was
 
 This allows users to install the package directly via pip and test its functionality without publishing to the main PyPI index.
 
-### 🧪 Installation Command:
+### 🧪 Installation Command *(updated)* :
 
 ```bash
 pip install -i https://test.pypi.org/simple/ sp211-2220674062
