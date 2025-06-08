@@ -1,3 +1,8 @@
 2025-06-01 23:59:56,235 - INFO - Geomatik Mühendisliði \u2192 Kütüphane | Mesafe: 0.67 km | Harita: map.html
 2025-06-02 00:06:16,282 - INFO - Geomatik Mühendisliði \u2192 Kütüphane | Mesafe: 0.67 km | Harita: map.html
 2025-06-02 00:11:54,672 - INFO - Geomatik Mühendisliði \u2192 Kütüphane | Mesafe: 0.67 km | Harita: map.html
+2025-06-08 00:48:45,000 - INFO - Geomatik Mühendisliði \u2192 Kütüphane \u2192 YDYO | Toplam Mesafe: 0.94 km | Harita: multi_map.html
+2025-06-08 00:52:11,176 - INFO - Geomatik Mühendisliði \u2192 Kütüphane \u2192 YDYO | Toplam Mesafe: 1.82 km | Harita: multi_map.html
+2025-06-08 00:57:34,364 - INFO - Geomatik Mühendisliði \u2192 Kütüphane \u2192 YDYO | Toplam Mesafe: 1.4 km | Harita: multi_map.html
+2025-06-08 02:27:06,436 - INFO - Kütüphane \u2192 Rektörlük \u2192 Geomatik Mühendisliði | Toplam Mesafe: 0.83 km | Harita: multi_map.html
+2025-06-08 02:30:45,044 - INFO - Kütüphane \u2192 Rektörlük \u2192 Geomatik Mühendisliði | Toplam Mesafe: 0.86 km | Harita: multi_map.html

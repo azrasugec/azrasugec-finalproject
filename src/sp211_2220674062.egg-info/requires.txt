@@ -1,10 +1,5 @@
-
-[dev]
-pytest
-twine
-wheel
-build
-sphinx
-
-[test]
+networkx
+folium
+osmnx
+geopy
 pytest

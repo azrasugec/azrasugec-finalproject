@@ -82,12 +82,12 @@ It contains all the key components required to read location data, apply intelli
   Uses OSMnx to generate the walking network graph for the Beytepe Campus, and NetworkX to calculate the shortest route using Dijkstra’s algorithm.  
   It then visualizes the result with Folium and saves it as an interactive HTML map.
 
-> Logs are saved automatically under the `logs/log.txt` file if the folder doesn't exist.
+- Logs are saved automatically under the `logs/log.txt` file if the folder doesn't exist.
 
->❗**Recently Added Features** `get_route_summary()`  
+# ❗**Recently Added Features** `get_route_summary()`  
   Calculates distance, number of steps, and estimated walking time.
 
->❗**Recently Added Features** `calculate_multi_stop_route([...])`  
+# ❗**Recently Added Features** `calculate_multi_stop_route([...])`  
   Computes routes that pass through multiple waypoints in order.
 
 
@@ -118,7 +118,7 @@ Rektörlük,39.86660,32.73540
 
 ## 📦 Step 4 – Uploading the Package to TestPyPI
 
-After the development and packaging steps were completed, the Python package was uploaded to [TestPyPI](https://test.pypi.org/project/sp211-2220674062/).
+After the development and packaging steps were completed, the Python package was uploaded to [TestPyPI](https://test.pypi.org/simple/ sp211-2220674062/).
 
 This allows users to install the package directly via pip and test its functionality without publishing to the main PyPI index.
 
@@ -149,14 +149,6 @@ The result is printed in the terminal and the route is saved as an interactive `
 
 ![Step 5 – main.py CLI Interface](img/ss4.png)
 
->❗**Recently Added Features** 
-
-- The `main.py` script was updated to support multiple destination inputs (e.g., A → B → C),  
-- and now calculates the total route distance for multi-stop paths.  
-- The result is displayed in the terminal and saved as `multi_map.html`.
-
-![Multi-stop CLI interaction](img/ss13.png)
-
 ---------
 
 ## 📏 Step 6 – User Input and Route Generation
@@ -177,6 +169,15 @@ The distance is displayed in the terminal, and the route is visualized and saved
 ```
 
 ![Step 6 – input](img/ss5.png)
+
+# ❗**Recently Added Features** 
+
+- The `main.py` script was updated to support multiple destination inputs (e.g., A → B → C),  
+- and now calculates the total route distance for multi-stop paths.  
+- The result is displayed in the terminal and saved as `multi_map.html`.
+
+![Multi-stop CLI interaction](img/ss13.png)
+
 
 -----------
 ## 🗺️ Step 7 – HTML Map Output with Route Visualization
@@ -218,8 +219,8 @@ pytest tests/test_shortest_path.py
 
 ![Step 8 – test](img/ss9.png)
 
->❗**Recently Added Features** These features were verified using `pytest`, and continuous integration was set up via **GitHub Actions**.  
-> The test suite is automatically triggered on each commit to ensure functionality.
+# ❗**Recently Added Features** These features were verified using `pytest`, and continuous integration was set up via **GitHub Actions**.  
+- The test suite is automatically triggered on each commit to ensure functionality.
 
 ![CI passing](img/ss12.png)
 ---------
@@ -265,6 +266,16 @@ This project uses the custom **Wagtail Theme** from the [Sphinx Themes Gallery](
 
 ----------
 
+## 🔁 Step 11 – CI/CD with GitHub Actions
+
+A continuous integration pipeline was configured using GitHub Actions.
+
+-  Automatically installs dependencies from `requirements.txt`
+-  Runs `pytest` on each push
+-  Ensures code reliability with every update
+
+![Step 11 –CI ](img/ss15.png)
+
 ## 📦 Used Python Libraries
 
 Below is a summary of the external Python libraries used in this project and their respective purposes:
@@ -280,6 +291,8 @@ Below is a summary of the external Python libraries used in this project and the
 | **difflib**   | To correct user input with fuzzy matching (AI-like suggestion system)   |
 | **pytest**    | To write and run unit tests that verify core functionalities            |
 | **Sphinx**    | To generate structured documentation and host it with Wagtail Theme     |
+| **scikit-learn** | To support nearest node search via BallTree in OSM-based unprojected graphs |
+| **twine**        | To securely upload the Python package to TestPyPI                           |
 
 -----------
 
@@ -301,16 +314,12 @@ This fuzzy matching mechanism prevents errors and enhances the user experience b
 User input: "küütüphane"
 → Corrected to: "Kütüphane"
 ```
+
+2️⃣ General Code Improvements with AI Help
+Although I didn't use AI models for the main functionality, I did get help from AI tools (like ChatGPT) during development.
+These tools helped me fix small mistakes, choose better variable names, and improve how the program works step by step.
+Thanks to that, the code became easier to understand and more user-friendly.
 ----------
-## 🔁 Step 11 – CI/CD with GitHub Actions
-
-A continuous integration pipeline was configured using GitHub Actions.
-
--  Automatically installs dependencies from `requirements.txt`
--  Runs `pytest` on each push
--  Ensures code reliability with every update
-
-![CI passing](img/ss15.png)
 
 
 ## ✅ Conclusion

@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>Shortest Path Project - Azra Sugeç documentation &mdash; Shortest Path Project - Azra Sugeç 0.1.0 documentation</title>
+        <title>Shortest Path Project - Azra Sugeç &mdash; Shortest Path Project - Azra Sugeç 0.1.0 documentation</title>
     
     <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=310cf088" />
@@ -60,6 +60,11 @@
         <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Kütüphane Kullanım Mantığı</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">sp211_2220674062</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sp211_2220674062.html">sp211_2220674062 package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced CLI Usage</a></li>
 </ul>
 
     </nav>
@@ -80,7 +85,7 @@
                         <nav aria-label="breadcrumb">
     <ol class="breadcrumb m-0 p-0 bg-transparent">
         <li class="breadcrumb-item"><a href="#">Docs</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Shortest Path Project - Azra Sugeç documentation</li>
+        <li class="breadcrumb-item active" aria-current="page">Shortest Path Project - Azra Sugeç</li>
     </ol>
 </nav>
                     </div>
@@ -111,24 +116,22 @@
                 <div class="row">
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
-    <section id="shortest-path-project-azra-sugec-documentation">
-<h1>Shortest Path Project - Azra Sugeç documentation<a class="headerlink" href="#shortest-path-project-azra-sugec-documentation" title="Link to this heading">¶</a></h1>
-</section>
-<section id="welcome-to-shortest-path-project">
-<h1>Welcome to Shortest Path Project!<a class="headerlink" href="#welcome-to-shortest-path-project" title="Link to this heading">¶</a></h1>
-<a class="reference external image-reference" href="https://test.pypi.org/project/sp211-2220674062/0.0.1/"><img alt="https://img.shields.io/badge/Author-Azra%20Sugeç-purple" class="align-right" src="https://img.shields.io/badge/Author-Azra%20Sugeç-purple" />
+    <section id="shortest-path-project-azra-sugec">
+<h1>Shortest Path Project - Azra Sugeç<a class="headerlink" href="#shortest-path-project-azra-sugec" title="Link to this heading">¶</a></h1>
+<p>Welcome to the official documentation for the <strong>Shortest Path Project</strong>, a Python package that calculates the shortest walking route between locations using OpenStreetMap (OSM) data. It was developed and tested on Hacettepe University’s Beytepe Campus.</p>
+<a class="reference external image-reference" href="https://test.pypi.org/project/sp211-2220674062/"><img alt="https://img.shields.io/badge/Author-Azra%20Sugeç-purple" class="align-right" src="https://img.shields.io/badge/Author-Azra%20Sugeç-purple" />
 </a>
-<p>📍 <strong>Shortest Path Project</strong>, kullanıcıların harita üzerindeki noktalar arasında en kısa yürüme mesafesini hesaplamasını sağlayan bir Python paketidir. Hacettepe Üniversitesi Beytepe Kampüsü üzerinde test edilmiştir.</p>
 <hr class="docutils" />
-<section id="kurulum">
-<h2>📦 Kurulum<a class="headerlink" href="#kurulum" title="Link to this heading">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://test.pypi.org/simple/<span class="w"> </span>--no-deps<span class="w"> </span>sp211-2220674062
+<section id="installation">
+<h2>📦 Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>You can install the latest version of the package from <strong>TestPyPI</strong> using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://test.pypi.org/simple/<span class="w"> </span>sp211-2220674062
 </pre></div>
 </div>
 </section>
 <hr class="docutils" />
-<section id="kullanim-ornegi">
-<h2>🚀 Kullanım Örneği<a class="headerlink" href="#kullanim-ornegi" title="Link to this heading">¶</a></h2>
+<section id="basic-usage">
+<h2>🚀 Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sp211_2220674062.shortest_path</span> <span class="kn">import</span> <span class="n">calculate_shortest_path_and_map_from_names</span>
 
 <span class="n">distance</span> <span class="o">=</span> <span class="n">calculate_shortest_path_and_map_from_names</span><span class="p">(</span>
@@ -142,33 +145,59 @@
 </div>
 </section>
 <hr class="docutils" />
-<section id="ornek-harita">
-<h2>🌐 Örnek Harita<a class="headerlink" href="#ornek-harita" title="Link to this heading">¶</a></h2>
-<p>Harita linki, seçilen noktalara göre dinamik olarak oluşur.
-Örnek kullanımda şu şekilde görünebilir:</p>
-<a class="reference external image-reference" href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_walk&amp;route=39.8657%2C32.7336%3B39.8708%2C32.7348"><img alt="https://img.shields.io/badge/Harita-Görüntüle-blue?logo=OpenStreetMap" src="https://img.shields.io/badge/Harita-Görüntüle-blue?logo=OpenStreetMap" />
+<section id="new-features-phase-2">
+<h2>✨ New Features (Phase 2)<a class="headerlink" href="#new-features-phase-2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><cite>get_route_summary(origin, destination, csv_path)</cite>
+→ Returns total distance, number of steps, and estimated walking time.</p></li>
+<li><p><cite>calculate_multi_stop_route([A, B, C], csv_path)</cite>
+→ Calculates a route that passes through multiple user-defined stops in order.</p></li>
+<li><p><cite>main.py</cite> CLI updated to support multi-stop input and return summary results.</p></li>
+<li><p>CI/CD pipeline set up via GitHub Actions.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="example-route-map">
+<h2>🌐 Example Route Map<a class="headerlink" href="#example-route-map" title="Link to this heading">¶</a></h2>
+<p>The OpenStreetMap route is dynamically generated between selected coordinates.</p>
+<p>In the example below, the path goes from <strong>Geomatik Mühendisliği</strong> to <strong>Kütüphane</strong>:</p>
+<a class="reference external image-reference" href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_walk&amp;route=39.8657%2C32.73369%3B39.87081%2C32.73482"><img alt="https://img.shields.io/badge/Harita-Görüntüle-blue?logo=OpenStreetMap" src="https://img.shields.io/badge/Harita-Görüntüle-blue?logo=OpenStreetMap" />
 </a>
 </section>
 <hr class="docutils" />
-<section id="notlar">
-<h2>📝 Notlar<a class="headerlink" href="#notlar" title="Link to this heading">¶</a></h2>
-<ul class="simple">
-<li><p>CSV dosyanızın şu şekilde olması gerekir:</p></li>
-</ul>
+<section id="csv-format-example">
+<h2>📁 CSV Format Example<a class="headerlink" href="#csv-format-example" title="Link to this heading">¶</a></h2>
+<p>The routing system uses a CSV file with real latitude/longitude pairs.
+Below is an actual sample from this project:</p>
 <div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>name,lat,lon
 Geomatik Mühendisliği,39.86570,32.73369
 Kütüphane,39.87081,32.73482
+YDYO,39.86905,32.73200
+Rektörlük,39.86660,32.73540
+Öğrenci Evleri,39.86800,32.73620
+Yemekhane,39.86850,32.73590
 </pre></div>
 </div>
+</section>
+<hr class="docutils" />
+<section id="ai-based-input-handling">
+<h2>🤖 AI-Based Input Handling<a class="headerlink" href="#ai-based-input-handling" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Kullanıcı girişleri otomatik düzeltilir (örneğin <cite>küütüphane</cite> → <cite>Kütüphane</cite>).</p></li>
-<li><p>Rota <cite>map.html</cite> olarak kaydedilir.</p></li>
+<li><p>User input is auto-corrected using <cite>difflib.get_close_matches()</cite></p></li>
+<li><p>Prevents route calculation errors due to typos or casing issues
+(e.g., <cite>“küütüphane”</cite> → <cite>“Kütüphane”</cite>)</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="testing-ci">
+<h2>🧪 Testing &amp; CI<a class="headerlink" href="#testing-ci" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Unit tests are written using <cite>pytest</cite></p></li>
+<li><p>Tests are automatically triggered via GitHub Actions on each push</p></li>
+<li><p>Code coverage includes routing, summaries, and map generation</p></li>
 </ul>
 <hr class="docutils" />
-<p>📚 İçindekiler</p>
-<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
-<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
-documentation for details.</p>
+<p>📚 Contents</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -176,6 +205,14 @@ documentation for details.</p>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#adim-adim-nasil-calisir">Adım Adım Nasıl Çalışır?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#dinamik-ozellikler">Dinamik Özellikler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#gereken-dosyalar">Gereken Dosyalar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">sp211_2220674062</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sp211_2220674062.html">sp211_2220674062 package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced CLI Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced_usage.html#view-example-map">🌐 View Example Map:</a></li>
 </ul>
 </li>
 </ul>
@@ -195,12 +232,14 @@ documentation for details.</p>
                         <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
                             <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
                             <ul>
-<li><a class="reference internal" href="#">Shortest Path Project - Azra Sugeç documentation</a></li>
-<li><a class="reference internal" href="#welcome-to-shortest-path-project">Welcome to Shortest Path Project!</a><ul>
-<li><a class="reference internal" href="#kurulum">📦 Kurulum</a></li>
-<li><a class="reference internal" href="#kullanim-ornegi">🚀 Kullanım Örneği</a></li>
-<li><a class="reference internal" href="#ornek-harita">🌐 Örnek Harita</a></li>
-<li><a class="reference internal" href="#notlar">📝 Notlar</a></li>
+<li><a class="reference internal" href="#">Shortest Path Project - Azra Sugeç</a><ul>
+<li><a class="reference internal" href="#installation">📦 Installation</a></li>
+<li><a class="reference internal" href="#basic-usage">🚀 Basic Usage</a></li>
+<li><a class="reference internal" href="#new-features-phase-2">✨ New Features (Phase 2)</a></li>
+<li><a class="reference internal" href="#example-route-map">🌐 Example Route Map</a></li>
+<li><a class="reference internal" href="#csv-format-example">📁 CSV Format Example</a></li>
+<li><a class="reference internal" href="#ai-based-input-handling">🤖 AI-Based Input Handling</a></li>
+<li><a class="reference internal" href="#testing-ci">🧪 Testing &amp; CI</a></li>
 </ul>
 </li>
 </ul>
