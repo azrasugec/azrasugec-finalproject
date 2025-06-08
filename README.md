@@ -266,6 +266,16 @@ This project uses the custom **Wagtail Theme** from the [Sphinx Themes Gallery](
 
 ----------
 
+## 🔁 Step 11 – CI/CD with GitHub Actions
+
+A continuous integration pipeline was configured using GitHub Actions.
+
+-  Automatically installs dependencies from `requirements.txt`
+-  Runs `pytest` on each push
+-  Ensures code reliability with every update
+
+![Step 11 –CI ](img/ss15.png)
+
 ## 📦 Used Python Libraries
 
 Below is a summary of the external Python libraries used in this project and their respective purposes:
@@ -304,16 +314,12 @@ This fuzzy matching mechanism prevents errors and enhances the user experience b
 User input: "küütüphane"
 → Corrected to: "Kütüphane"
 ```
+
+2️⃣ General Code Improvements with AI Help
+Although I didn't use AI models for the main functionality, I did get help from AI tools (like ChatGPT) during development.
+These tools helped me fix small mistakes, choose better variable names, and improve how the program works step by step.
+Thanks to that, the code became easier to understand and more user-friendly.
 ----------
-## 🔁 Step 11 – CI/CD with GitHub Actions
-
-A continuous integration pipeline was configured using GitHub Actions.
-
--  Automatically installs dependencies from `requirements.txt`
--  Runs `pytest` on each push
--  Ensures code reliability with every update
-
-![Step 11 –CI ](img/ss15.png)
 
 
 ## ✅ Conclusion
