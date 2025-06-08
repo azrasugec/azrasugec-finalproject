@@ -90,9 +90,9 @@ It contains all the key components required to read location data, apply intelli
 
 - Logs are saved automatically under the `logs/log.txt` file if the folder doesn't exist.
 
-`calculate_multi_stop_route(stop_names, csv_path, filename="multi_map.html")`  
--Calculates the shortest path passing through multiple waypoints in order.
--Saves the multi-stop route as `multi_map.html`.
+- `calculate_multi_stop_route(stop_names, csv_path, filename="multi_map.html")`  
+-  Calculates the shortest path passing through multiple waypoints in order.
+-  Saves the multi-stop route as `multi_map.html`.
 
 - `get_route_summary(origin, destination, csv_path)`  
   Returns a dictionary with:
